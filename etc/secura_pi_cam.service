@@ -1,0 +1,30 @@
+[Unit]
+
+Description=secura_pi_cam service
+
+After=multi-user.target
+
+
+
+[Service]
+Type=idle
+
+StandardOutput=null
+
+TimeoutStartSec=15
+
+ExecStartPre=/sbin/iw phy phy0 interface add mon0 type monitor
+
+ExecStartPre=/sbin/ifconfig mon0 up
+
+ExecStart=/usr/local/bin/secura_pi_cam.py
+
+ExecStop=/usr/bin/pkill -9 secura_pi_cam.py
+
+ExecStopPost=/sbin/iw dev mon0 del
+
+
+
+[Install]
+
+WantedBy=multi-user.target
