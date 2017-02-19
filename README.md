@@ -1,7 +1,9 @@
 # Secura-Pi-Cam
-
-A simple security system to run on a [Raspberry Pi](https://www.raspberrypi.org/).
 ![logo 1](../master/logo/1.png?raw=true)
+A simple security system to run on a [Raspberry Pi](https://www.raspberrypi.org/).
+
+![picture 1](../master/logo/Picture1.png?raw=true)
+
 Features:
   - Motion triggered image capture.
   - Mobile notifications with photos.
